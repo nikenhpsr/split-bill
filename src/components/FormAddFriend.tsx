@@ -1,4 +1,4 @@
-import AddFriendButton from "./AddFriendButton";
+import Button from "./Button";
 
 export default function FormAddFriend() {
   return (
@@ -7,7 +7,7 @@ export default function FormAddFriend() {
       <input type="text" />
       <label>📸Image URL</label>
       <input type="text" />
-      <AddFriendButton>Add friend</AddFriendButton>
+      <Button>Add friend</Button>
     </form>
   );
 }
