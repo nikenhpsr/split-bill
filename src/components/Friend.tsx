@@ -1,4 +1,4 @@
-type FriendProps = {
+export type FriendProps = {
   friend: {
     id: number;
     name: string;

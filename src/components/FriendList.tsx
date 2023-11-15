@@ -8,10 +8,10 @@ type FriendProps = {
 };
 
 type FriendListProps = {
-  friend: FriendProps[];
+  friends: FriendProps[];
 };
 
-const initialFriends = [
+export const initialFriends = [
   {
     id: 118836,
     name: "Clark",
@@ -32,9 +32,7 @@ const initialFriends = [
   },
 ];
 
-export default function FriendList({ friend }: FriendListProps) {
-  const friends = initialFriends;
-
+export default function FriendList({ friends }: FriendListProps) {
   return (
     <>
       <ul>
