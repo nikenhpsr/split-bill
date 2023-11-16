@@ -1,3 +1,4 @@
+import { InitialProps } from "../App";
 import Friend from "./Friend";
 
 type FriendProps = {
@@ -7,8 +8,10 @@ type FriendProps = {
   balance: number;
 };
 
-type FriendListProps = {
+export type FriendListProps = {
   friends: FriendProps[];
+  onSelection: (friend: FriendProps) => void;
+  selectedFriend: InitialProps;
 };
 
 export const initialFriends = [
@@ -32,12 +35,21 @@ export const initialFriends = [
   },
 ];
 
-export default function FriendList({ friends }: FriendListProps) {
+export default function FriendList({
+  friends,
+  onSelection,
+  selectedFriend,
+}: FriendListProps) {
   return (
     <>
       <ul>
         {friends.map((friend) => (
-          <Friend friend={friend} key={friend.id} />
+          <Friend
+            friend={friend}
+            key={friend.id}
+            onSelection={onSelection}
+            selectedFriend={selectedFriend}
+          />
         ))}
       </ul>
     </>
