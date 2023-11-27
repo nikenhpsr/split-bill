@@ -11,7 +11,7 @@ type FriendProps = {
 export type FriendListProps = {
   friends: FriendProps[];
   onSelection: (friend: FriendProps) => void;
-  selectedFriend: InitialProps;
+  selectedFriend: InitialProps | null;
 };
 
 export const initialFriends = [

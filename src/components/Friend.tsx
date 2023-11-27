@@ -10,7 +10,7 @@ type FriendProps = {
 type FriendComponentProps = {
   friend: FriendProps;
   onSelection: (friend: FriendProps) => void;
-  selectedFriend: InitialProps;
+  selectedFriend: InitialProps | null;
 };
 
 export default function Friend({
